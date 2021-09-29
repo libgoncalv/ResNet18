@@ -375,7 +375,7 @@ logs = test_env.get_stat()
 with open('Results/%s/test.ser' % save_filename, 'wb') as fp:
   pickle.dump(logs, fp)
 # Save of training configuration
-with open('Results/%s/config.txt' % save_filename, 'wb') as fp:
+with open('Results/%s/config.txt' % save_filename, 'w') as fp:
   fp.write("parameters -> %s\n" % parameters)
   fp.write("metrics -> %s\n" % metrics)
   fp.write("val_metrics -> %s\n" % val_metrics)
